@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support the Project - $koola10</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #1c1c1c;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h1 {
+      color: #00c853;
+    }
+    button {
+      background-color: #00c853;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #00e676;
+    }
+    .copied {
+      margin-top: 10px;
+      color: #a5d6a7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Support My Project</h1>
+    <p>I'm raising money for a special project and asking for just <strong>$1</strong> from each supporter.</p>
+    <p>Every dollar makes a difference. Please send your donation to my Cash App tag:</p>
+    <h2>$koola10</h2>
+    <button onclick="copyTag()">Copy Tag</button>
+    <div class="copied" id="copiedMsg"></div>
+  </div>
+
+  <script>
+    function copyTag() {
+      const tag = "$koola10";
+      navigator.clipboard.writeText(tag).then(() => {
+        document.getElementById('copiedMsg').innerText = 'Cash App tag copied to clipboard!';
+      }).catch(err => {
+        document.getElementById('copiedMsg').innerText = 'Failed to copy tag. Try manually.';
+      });
+    }
+  </script>
+</body>
+</html>
