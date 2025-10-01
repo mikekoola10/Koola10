@@ -1,7 +1,9 @@
-Js
+App js
 
 
-import './style.css'
-import App from './App.js'
-
-document.querySelector('#app').innerHTML = App()
+export default function App() {
+  return `
+    <h1>Hello Spiral 🚀</h1>
+    <p>Your Vite app is running!</p>
+  `
+}
